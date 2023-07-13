@@ -14,14 +14,24 @@ if s > 1000:
 # y = (s+int((s**2-4*p)**0.5))//2
 # print(x, y)
 
-flag = 0 # через цикл
-for i in range(s + p):
-    if flag:
+# через цикл
+
+# flag = 0 
+# for i in range(s + p):
+#     if flag:
+#         break
+#     for j in range(s + p):
+#         if i + j == s and i * j == p:
+#             flag = 1
+#             print(i,j)
+#             break
+# if not flag:
+#     print('Решений нет')
+
+
+for i in range(s):
+    if (i * (s - i)) == p:
+        print(i,(s - i))
         break
-    for j in range(s + p):
-        if i + j == s and i * j == p:
-            flag = 1
-            print(i,j)
-            break
-if not flag:
-    print('Решений нет')
+else:
+    print("Нет решений")
